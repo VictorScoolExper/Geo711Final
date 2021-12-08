@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+.marker {
+    width: 50px;
+    height: 50px;
+    /*background-color: red;*/
+    background-image: url("./assets/image/bus.png");
+    //background-color: aqua;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

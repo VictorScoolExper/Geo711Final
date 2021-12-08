@@ -1,0 +1,43 @@
+<mat-grid-list cols="6" rowHeight="100px">
+
+  <mat-grid-tile colspan="6" rowspan="1">
+    <h1>Los Rieleros del Norte Raspberry</h1>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1" rowspan="3">
+
+  </mat-grid-tile>
+  <mat-grid-tile colspan="4" rowspan="4" style="background: lightgray">
+
+    <form class="inputs" [formGroup]="loginForm" (ngSubmit)="loginUser()">
+
+      <mat-form-field class="inputStyle" appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input autocomplete="off" formControlName="email" type="email" matInput placeholder="Email">
+      </mat-form-field>
+
+      <mat-form-field class="inputStyle" appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input autocomplete="off" formControlName="password" type="password" matInput placeholder="Password">
+      </mat-form-field>
+
+      <div *ngIf="firebaseErrorMessage != ''" class="error-style">
+        <span>{{ firebaseErrorMessage }}</span>
+      </div>
+
+      <div style="text-align: center;">
+        <div class="progressIndicator" [style.display]="isProgressVisible ? 'inline' : 'none' ">
+          <mat-progress-spinner class=" example-margin" color="primary" mode="indeterminate"></mat-progress-spinner>
+        </div>
+        <button class="btnLog" mat-raised-button color="primary">Login</button>
+      </div>
+    </form>
+
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1" rowspan="3">
+
+  </mat-grid-tile>
+
+</mat-grid-list>
+

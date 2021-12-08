@@ -1,0 +1,39 @@
+<mat-grid-list cols="6" rowHeight="200px">
+
+    <mat-grid-tile colspan="6" rowspan="1" style="background: lightblue; text-align: center;">
+        <h1>Track Bus</h1> 
+        <div style="margin-top: 5%;">
+            <button class="btnLog" mat-raised-button color="primary" (click)="goHome()">Return Home</button>
+        </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" rowspan="2"></mat-grid-tile>
+
+    <mat-grid-tile colspan="4" rowspan="2">
+        <div class="progressIndicator" [style.display]="isProgressConeFire ? 'inline' : 'none' ">
+            <mat-progress-spinner class=" example-margin" color="primary" mode="indeterminate"></mat-progress-spinner>
+        </div>
+        
+        <form class="inputs" [style.display]="isFinish ? 'inline' : 'none' ">
+
+            <div style="margin-top: 5%; margin-bottom: 5%;">
+                <button class="btnLog" mat-raised-button color="primary" (click)="startTracking()">Track Bus</button>
+            </div>
+
+            <div class="progressIndicator" [style.display]="isProgressVisible ? 'inline' : 'none' ">
+                <mat-progress-spinner class=" example-margin" color="primary" mode="indeterminate"></mat-progress-spinner>
+            </div>
+
+            <div style="margin-top: 5%; margin-bottom: 5%;">
+                <button class="btnLog" mat-raised-button color="primary" (click)="stop()">Stop Tracking</button>
+            </div>
+    
+        </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" rowspan="2"></mat-grid-tile>
+
+    <mat-grid-tile colspan="6" rowspan="1"></mat-grid-tile>
+    
+</mat-grid-list>
+

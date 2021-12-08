@@ -1,0 +1,37 @@
+<mat-grid-list cols="6" rowHeight="2:1">
+    <mat-grid-tile colspan="6" rowspan="1">
+        <div>
+            <button mat-raised-button color="primary" (click)="logout()">
+                <mat-icon>logout</mat-icon>
+                <span>Log out</span>
+            </button>
+        </div>
+
+        <h1 style="font-size: 60px;">Menu</h1>
+        
+        
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="4" rowspan="5" style="margin-left: 30px;">
+        <div id="map" #asMap style="width: 100%; height: 100%; ">
+            Map Here
+        </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="2" rowspan="5">
+        <div style="flex-direction: column;">
+            <div style="width: 100%;">
+                <h1 style="font-size: 50px;">Buses</h1>
+            </div>
+            
+            <div style="width: 100%;">
+                <div *ngFor="let buses of listBus; let i = index">
+                    <button style="width: 80%;margin: 20px;" mat-raised-button color="primary" (click)="viewRouteLoca(i)">{{buses.name}}</button>
+                </div>
+            </div>
+            
+        </div>
+    </mat-grid-tile>
+
+    
+</mat-grid-list>

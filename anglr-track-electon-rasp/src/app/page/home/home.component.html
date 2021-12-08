@@ -1,0 +1,30 @@
+<mat-grid-list cols="6" rowHeight="200px">
+    <mat-grid-tile colspan="6" rowspan="1">
+        <h1>Menu</h1>
+        <button mat-raised-button color="primary" (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            <span>Log out</span>
+        </button>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" rowspan="2">
+
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="4" rowspan="2" style="background: lightgreen">
+        <div style="text-align: center;">
+
+            <button class="btnS" mat-raised-button style="background-color: red;" routerLink="/trackBus">
+                Track Bus
+            </button>
+
+        </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" rowspan="2">
+
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="6" rowspan="1"></mat-grid-tile>
+
+</mat-grid-list>

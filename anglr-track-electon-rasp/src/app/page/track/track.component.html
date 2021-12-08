@@ -1,11 +1,13 @@
+<div style="text-align: center; margin: 25px;">
+    <h1 style="font-size: 60px;">Track Bus</h1>
+</div>
+<div style="margin: 10px;">
+    <div style="margin-top: 5%;">
+        <button class="btnLog" mat-raised-button color="primary" routerLink="/home">Return Home</button>
+    </div>
+</div>
 <mat-grid-list cols="6" rowHeight="200px">
 
-    <mat-grid-tile colspan="6" rowspan="1" style="background: lightblue; text-align: center;">
-        <h1>Track Bus</h1> 
-        <div style="margin-top: 5%;">
-            <button class="btnLog" mat-raised-button color="primary" (click)="goHome()">Return Home</button>
-        </div>
-    </mat-grid-tile>
 
     <mat-grid-tile colspan="1" rowspan="2"></mat-grid-tile>
 
@@ -20,7 +22,8 @@
                 <button class="btnLog" mat-raised-button color="primary" (click)="startTracking()">Track Bus</button>
             </div>
 
-            <div class="progressIndicator" [style.display]="isProgressVisible ? 'inline' : 'none' ">
+            <div style="text-align: center;" class="progressIndicator" [style.display]="isProgressVisible ? 'inline' : 'none' ">
+                <h4>Loading Coords</h4>
                 <mat-progress-spinner class=" example-margin" color="primary" mode="indeterminate"></mat-progress-spinner>
             </div>
 
@@ -33,7 +36,7 @@
 
     <mat-grid-tile colspan="1" rowspan="2"></mat-grid-tile>
 
-    <mat-grid-tile colspan="6" rowspan="1"></mat-grid-tile>
+    
     
 </mat-grid-list>
 

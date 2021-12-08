@@ -1,24 +1,22 @@
-<mat-grid-list cols="6" rowHeight="100px">
-
-    <mat-grid-tile colspan="6" rowspan="1">
-      <h1>Los Rieleros del Norte Tracking Map</h1>
-    </mat-grid-tile>
+<br>
+<div style="text-align: center;">
+  <h1>Los Rieleros del Norte Tracking Map</h1>
+</div>
+<br>
+<mat-grid-list class="cont-login" cols="6" rowHeight="100px">  
+    
+    <mat-grid-tile colspan="6" rowspan="4">
   
-    <mat-grid-tile colspan="1" rowspan="3">
+      <form class="inputs" style="background: lightgray; padding: 20px; text-align: center;" [formGroup]="loginForm" (ngSubmit)="loginUser()">
   
-    </mat-grid-tile>
-    <mat-grid-tile colspan="4" rowspan="4" style="background: lightgray">
-  
-      <form class="inputs" [formGroup]="loginForm" (ngSubmit)="loginUser()">
-  
-        <mat-form-field class="inputStyle" appearance="fill">
-          <mat-label>Enter your email</mat-label>
-          <input autocomplete="off" formControlName="email" type="email" matInput placeholder="Email">
+        <mat-form-field class="inputStyle" appearance="fill" >
+          <mat-label style="font-size: 20px;">Enter your email</mat-label>
+          <input style="height: 30px;" autocomplete="off" formControlName="email" type="email" matInput placeholder="Email">
         </mat-form-field>
   
         <mat-form-field class="inputStyle" appearance="fill">
-          <mat-label>Enter your password</mat-label>
-          <input autocomplete="off" formControlName="password" type="password" matInput placeholder="Password">
+          <mat-label style="font-size: 20px;">Enter your password</mat-label>
+          <input style="height: 30px;" autocomplete="off" formControlName="password" type="password" matInput placeholder="Password">
         </mat-form-field>
   
         <div *ngIf="firebaseErrorMessage != ''" class="error-style">
@@ -35,8 +33,5 @@
   
     </mat-grid-tile>
   
-    <mat-grid-tile colspan="1" rowspan="3">
-  
-    </mat-grid-tile>
   
   </mat-grid-list>
